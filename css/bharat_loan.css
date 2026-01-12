@@ -107,36 +107,133 @@ body{
 
 /* Hero section CSS */
 
-/* .wrapper{
-    margin-top: 92px;
-} */
-
-.homeBanner {
-    background-image: url("../img/banner_img.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-    /* min-height: 710px; */
-    min-height: 572px;
+.payday-hero{
+  background: url("/img/banner_img.png"); /* main red like screenshot */
+  position: relative;
+  overflow: hidden;
 }
 
-.apply-btn {
-    background: #032e63 !important;
-    transition: all 0.4s ease-in-out !important;
-    font-weight: 500;
-    padding: 10px 24px;
-    font-size: 16px;
-    color: #ffffff !important;
-    border-color: #032e63 !important;
+/* Background polygons */
+.payday-hero::before,
+.payday-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto;
+  z-index:0;
+  opacity: 0.25;
 }
 
-h1, h2 {
-  font-size: 52px !important;
-  font-weight: 700 !important;
+.payday-hero::before{
+  width: 520px;
+  height: 520px;
+  right: 18%;
+  top: -120px;
+  background: #ff8aa0;
+  clip-path: polygon(20% 0%, 100% 10%, 85% 100%, 0% 85%);
 }
 
-img {
-  max-width: 100%;
+.payday-hero::after{
+  width: 700px;
+  height: 380px;
+  right: -140px;
+  bottom: -140px;
+  background: #ff6e86;
+  clip-path: polygon(15% 0%, 100% 20%, 85% 100%, 0% 80%);
 }
+
+.payday-hero .container,
+.payday-hero .row{
+  position: relative;
+  z-index: 1;
+}
+
+.payday-title{
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.15;
+}
+
+.payday-text{
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* Button like screenshot */
+.payday-btn{
+  background:#0b2a4a;
+  color:#fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  border: 0;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  text-decoration: none;
+}
+.payday-btn:hover{
+  color:#fff;
+  filter: brightness(1.05);
+}
+.payday-btn-icon{
+  display:inline-flex;
+  width: 24px;
+  height: 24px;
+  align-items:center;
+  justify-content:center;
+  background: rgba(255,255,255,0.12);
+  border-radius: 6px;
+}
+
+/* Collage layout */
+.payday-collage{
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;  /* tall + stack */
+  gap: 18px;
+  align-items: center;
+  justify-content: end;
+}
+
+.payday-stack{
+  display: grid;
+  gap: 18px;
+}
+
+/* Image wrappers */
+.payday-img{
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.18);
+  background: rgba(255,255,255,0.08);
+}
+
+.payday-img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display:block;
+}
+
+.payday-img-tall{
+  height: 320px; /* adjust to match */
+  border-radius: 18px;
+}
+
+.payday-img-small{
+  height: 150px; /* adjust to match */
+  border-radius: 18px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px){
+  .payday-collage{
+    grid-template-columns: 1fr;
+  }
+  .payday-img-tall{
+    height: 260px;
+  }
+  .payday-img-small{
+    height: 180px;
+  }
+}
+
 
 
 /* Why Choose BharatLoan Payday Loans CSS */
@@ -274,10 +371,9 @@ img {
 
 /* Icon box (navy square) */
 .icon-box{
-  width: 52px;
-  height: 52px;
+  width: 70px;
+  height: 65px;
   border-radius: 10px;
-  background:#0b2a4a;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -286,8 +382,8 @@ img {
 
 /* Your icon images */
 .icon-img{
-  width: 26px;
-  height: 26px;
+  width: 70px;
+  height: 65px;
   object-fit: contain;
   display:block;
 }
@@ -298,4 +394,302 @@ img {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.35;
+}
+
+
+/* Common Uses for Payday Loans */
+.payday-uses .uses-title{
+  color:#0b2a4a;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.15;
+}
+
+.payday-uses .uses-subtitle{
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Card */
+.uses-card{
+  position: relative;
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px 18px;
+  min-height: 120px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Gradient border */
+.uses-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding: 1.6px;
+  border-radius: 10px;
+  background: var(--border-gradient);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events:none;
+}
+
+/* Icon */
+.uses-icon{
+  width: 44px;
+  height: 44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.uses-icon-img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display:block;
+}
+
+/* Text */
+.uses-text{
+  color:#0b2a4a;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+/* Apply for a Payday Loan Online with BharatLoan */
+.steps-title{
+  color:#0b2a4a;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.15;
+}
+
+/* Whole row is ONE box */
+.steps-panel{
+  border: 1px solid #d6dde8;     /* light border like screenshot */
+  border-radius: 8px;
+  background: #fff;
+  overflow: hidden;              /* keeps rounded corners clean */
+}
+
+/* Each column */
+.step-col{
+  position: relative;
+  background: #fff;
+}
+
+/* vertical divider between columns */
+.step-col:not(:last-child){
+  border-right: 1px solid #d6dde8;
+}
+
+/* Padding inside each box */
+.step-box{
+  padding: 18px 16px;
+  height: 100%;
+}
+
+/* Typography like screenshot */
+.step-label{
+  color:#0b2a4a;
+  font-weight: 700;
+  font-size: 12px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 10px;
+}
+
+.step-head{
+  color:#0b2a4a;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.step-desc{
+  color:#5c6b7a;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* Active cards (Step 2 & 4) — gradient border 2px */
+.step-col.is-active{
+  z-index: 2;                    /* bring above divider lines */
+}
+
+.step-col.is-active::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  padding: 2px;                  /* ✅ 2px like your border settings */
+  border-radius: 8px;
+  background: linear-gradient(90deg, #032E63 10%, #D12C4D);
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+
+  pointer-events:none;
+}
+
+/* Responsive: stacks nicely on mobile */
+@media (max-width: 991.98px){
+  .steps-panel{
+    overflow: visible;
+  }
+  .step-col{
+    border-right: 0 !important;
+    border-bottom: 1px solid #d6dde8;
+  }
+  .step-col:last-child{
+    border-bottom: 0;
+  }
+}
+
+
+/* Fast Loan Processing */
+.fast-loan-title{
+  color:#0b2a4a;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.12;
+}
+
+.fast-loan-imgwrap{
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.05);
+}
+
+.fast-loan-img{
+  border-radius: 24px;
+  object-fit: cover;
+}
+
+/* list text */
+.fast-list li span:last-child{
+  color:#0b2a4a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+/* icon alignment */
+.check{
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+
+/* Example of Cost Calculation for BharatLoan Customers */
+.cost-title{
+  color:#0b2a4a;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.15;
+}
+
+.cost-small{
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.cost-foot{
+  font-size: 12px;
+}
+
+/* ✅ table wrapper matches screenshot */
+.cost-table-wrap{
+  max-width: 520px;              /* table not too wide */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #d7e1ee;     /* clean thin border */
+  background:#fff;
+}
+
+/* header */
+.cost-table thead th{
+  background:#032E63;
+  color:#fff;
+  font-weight:700;
+  font-size:12px;
+  padding:10px 14px;
+  border:0;
+}
+
+/* body cells */
+.cost-table tbody td{
+  font-size: 12px;
+  color:#0b2a4a;
+  padding: 10px 14px;
+  border-top: 1px solid #e9f0f8;  /* thin row separators */
+  vertical-align: middle;
+}
+
+/* ✅ vertical separators like screenshot */
+.cost-table thead th:not(:last-child),
+.cost-table tbody td:not(:last-child){
+  border-right: 1px solid #e1ebf6;
+}
+
+/* ✅ light blue tinted rows only */
+.cost-table tbody tr.tint{
+  background:#E7F6FE;
+}
+
+/* Image matches screenshot */
+.cost-imgwrap{
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f2f2f2;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+}
+
+.cost-img{
+  object-fit: cover;
+  height: 100%;
+}
+
+/* mobile */
+@media (max-width: 991.98px){
+  .cost-table-wrap{ max-width: 100%; }
+}
+
+/* Compare BharatLoan with Other Credit Options */
+.compare-title{
+  color:#0b2a4a;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.12;
+}
+
+.compare-imgwrap{
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.05);
+}
+
+.compare-img{
+  border-radius: 24px;
+  object-fit: cover;
+  display:block;
+}
+
+.compare-list li span:last-child{
+  color:#0b2a4a;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.compare-check{
+  flex: 0 0 auto;
+  margin-top: 2px;
 }
