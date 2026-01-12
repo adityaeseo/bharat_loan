@@ -1,0 +1,301 @@
+/* Poppins font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif !important;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Navbar CSS */
+.custom-navbar{
+  z-index: 9999;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+nav{
+    padding: 50px !important;
+}
+
+
+/* Logo sizing */
+.logo-img{
+  max-height: 44px;
+  width: auto;
+}
+
+/* Nav link styling */
+.nav-link-custom{
+  font-weight: 600;
+  color: #111 !important;
+  padding: 10px 14px !important;
+  border-radius: 10px;
+  transition: all .2s ease-in-out;
+}
+
+.nav-link-custom:hover{
+  background: rgba(231,48,90,0.08);
+  color: #e7305a !important;
+}
+
+.nav-link-custom.active{
+  color: #e7305a !important;
+  background: rgba(231,48,90,0.10);
+}
+
+/* Button style used in your HTML */
+.rounded_12{
+  border-radius: 12px !important;
+}
+
+/* Desktop apply button spacing */
+.desktop-apply-btn{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Make toggler icon image behave well */
+.navbar-toggler-icon img{
+  width: 26px;
+  height: 26px;
+  display: block;
+}
+
+/* Optional: stop content hiding behind fixed navbar */
+body{
+  padding-top: 72px !important; /* adjust if your navbar height differs */
+}
+
+
+
+.navbar-logo {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.logo_site {
+    height: 72px;
+    width: auto;
+}
+
+.nav-link-custom {
+    font-size: 16px;
+    color: #212121;
+    padding: 0 12px !important;
+}
+
+.active {
+    color: #EE3265;
+    font-weight: 700;
+}
+
+.btn.btn-primary {
+    background: #032e63;
+    transition: all 0.4s ease-in-out;
+    font-weight: 500;
+    padding: 10px 24px;
+    font-size: 16px;
+    border-color: #032e63;
+}
+
+
+/* Hero section CSS */
+
+/* .wrapper{
+    margin-top: 92px;
+} */
+
+.homeBanner {
+    background-image: url("../img/banner_img.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    /* min-height: 710px; */
+    min-height: 572px;
+}
+
+.apply-btn {
+    background: #032e63 !important;
+    transition: all 0.4s ease-in-out !important;
+    font-weight: 500;
+    padding: 10px 24px;
+    font-size: 16px;
+    color: #ffffff !important;
+    border-color: #032e63 !important;
+}
+
+h1, h2 {
+  font-size: 52px !important;
+  font-weight: 700 !important;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+/* Why Choose BharatLoan Payday Loans CSS */
+
+/* Image card look */
+.bl-img-wrap {
+  border-radius: 24px;
+  overflow: hidden;
+  background: #f6f2ec; /* soft beige like screenshot */
+}
+
+.bl-img {
+  display: block;
+  border-radius: 24px;
+}
+
+/* Title style */
+.bl-title {
+  color: #0b2a4a; /* navy */
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.12;
+}
+
+/* "Top Reasons..." label */
+.bl-subtitle {
+  font-weight: 600;
+  color: #0b2a4a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* List items (pink pills) */
+.bl-item {
+  background: #fdecef;   /* light pink */
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 8px rgba(11, 42, 74, 0.06);
+}
+
+/* Number circle */
+.bl-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #0b2a4a; /* dark navy */
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  flex: 0 0 28px;
+}
+
+
+/* Eligibility Criteria for BharatLoan Customers */
+
+/* Light blue panel */
+.bl-elig-section{
+  background: #E7F6FE;
+}
+
+/* Title style */
+.bl-title{
+  color: #0b2a4a;
+  font-size: clamp(28px, 3vw, 44px);
+  line-height: 1.15;
+}
+
+/* Right image card */
+.bl-image-wrap{
+  border-radius: 24px;
+  overflow: hidden;
+  background: #dfe7ee;
+}
+
+/* Make image fill area nicely */
+.bl-image{
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Checklist spacing */
+.bl-checklist li{
+  color: #0b2a4a;
+  font-weight: 500;
+}
+
+.bl-check-icon{
+  line-height: 1;
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+
+/* Who Can Apply */
+.who-can-apply .section-title{
+  color:#0b2a4a;
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.1;
+}
+
+/* Card with gradient border */
+.gradient-card{
+  position: relative;
+  border-radius: 10px;
+  padding: 18px 18px;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+}
+
+/* Gradient border trick */
+.gradient-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  padding: 1.6px;              /* border thickness */
+  border-radius: 10px;
+  background: var(--border-gradient);
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events:none;
+}
+
+/* Backgrounds like screenshot */
+.bg-pink{ background:#fbf2f4; }
+.bg-blue{ background:#eaf6ff; }
+
+/* Icon box (navy square) */
+.icon-box{
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background:#0b2a4a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex: 0 0 auto;
+}
+
+/* Your icon images */
+.icon-img{
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display:block;
+}
+
+/* Text */
+.card-text{
+  color:#0b2a4a;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.35;
+}
