@@ -35,7 +35,7 @@ nav{
 
 /* Logo sizing */
 .logo-img{
-  max-height: 44px;
+  max-height: 55px;
   width: auto;
 }
 
@@ -48,9 +48,9 @@ nav{
   transition: all .2s ease-in-out;
 }
 
-.nav-link-custom:hover{
-  background: rgba(231,48,90,0.08);
+a.nav-link-custom:hover{
   color: #e7305a !important;
+  font-weight: 600;
 }
 
 
@@ -84,7 +84,7 @@ nav{
 }
 
 .logo_site {
-    height: 72px;
+    height: 80px;
     width: auto;
 }
 
@@ -109,7 +109,9 @@ nav{
 }
 
 
-/* Hero section CSS */
+/* =========================================================
+   Hero Section
+   ========================================================= */
 
 .payday-hero{
   background: url("/img/banner_img.png"); /* main red like screenshot */
@@ -218,7 +220,9 @@ section.payday-hero.py-5 {
 
 
 
-/* Why Choose BharatLoan Payday Loans CSS */
+/* =========================================================
+   Why Choose Section
+   ========================================================= */
 
 /* Image card look */
 .bl-img-wrap {
@@ -241,7 +245,7 @@ section.payday-hero.py-5 {
 
 /* "Top Reasons..." label */
 .bl-subtitle {
-  font-weight: 600;
+  font-weight: 400;
   color: #0b2a4a;
   /* text-decoration: underline; */
   text-underline-offset: 4px;
@@ -272,7 +276,9 @@ section.payday-hero.py-5 {
 }
 
 
-/* Eligibility Criteria for BharatLoan Customers */
+/* =========================================================
+   Eligibility Section
+   ========================================================= */
 
 /* Light blue panel */
 .bl-elig-section{
@@ -311,8 +317,9 @@ section.payday-hero.py-5 {
   flex: 0 0 auto;
 }
 
-
-/* Who Can Apply */
+/* =========================================================
+   Who Can Apply
+   ========================================================= */
 .who-can-apply .section-title{
   color:#0b2a4a;
   font-size: clamp(30px, 3vw, 44px);
@@ -347,7 +354,7 @@ section.payday-hero.py-5 {
   pointer-events:none;
 }
 
-/* Backgrounds like screenshot */
+/* Backgrounds */
 .bg-pink{ background:#fbf2f4; }
 .bg-blue{ background:#eaf6ff; }
 
@@ -379,7 +386,9 @@ section.payday-hero.py-5 {
 }
 
 
-/* Common Uses for Payday Loans */
+/* =========================================================
+   Common Uses
+   ========================================================= */
 .payday-uses .uses-title{
   color:#0b2a4a;
   font-size: clamp(28px, 3vw, 44px);
@@ -414,6 +423,7 @@ section.payday-hero.py-5 {
   inset:0;
   padding: 1.6px;
   border-radius: 10px;
+  border: 1px;
   background: var(--border-gradient);
 
   -webkit-mask:
@@ -562,7 +572,11 @@ section.payday-hero.py-5 {
     border-bottom: 0;
   }
 }
-/* Apply for a Payday Loan Online with BharatLoan */
+
+
+/* =========================================================
+   Fast Loan Processing
+   ========================================================= */
 
 
 /* Fast Loan Processing */
@@ -686,6 +700,7 @@ section.payday-hero.py-5 {
 .cost-table tbody td{
   font-size: 16px;
   color:#0b2a4a;
+  text-align: center;
   padding: 10px 14px;
   border-top: 1px solid #e9f0f8 !important;
   vertical-align: middle;
@@ -764,11 +779,15 @@ section.payday-hero.py-5 {
 
 /* Each row looks like a card (even collapsed) */
 .faq-accordion .faq-item{
-  border: 1px solid #eef2f7;
+  border-bottom: 1px solid #eef2f7;
   background: #fff;
   border-radius: 14px;
   overflow: hidden;              /* makes header+body feel like one card */
   margin-bottom: 14px;
+}
+
+#h1{
+  border-radius: 10px;
 }
 
 /* Button (question row) */
@@ -793,7 +812,7 @@ section.payday-hero.py-5 {
   background-image: url("/img/Vector.png"); /* CLOSED icon */
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 12px;
 
   width: 12px;
   height: 12px;
@@ -828,7 +847,7 @@ section.payday-hero.py-5 {
 
 /* Body text area inside the same pink card */
 .faq-body{
-  background: transparent;       /* card already has bg */
+  background: #e9bec833;       
   padding: 0 20px 18px 20px;
   color: rgba(0,0,0,0.70);
   font-size: 16px;
