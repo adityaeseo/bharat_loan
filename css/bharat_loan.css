@@ -8,6 +8,20 @@ body {
     margin: 0;
 }
 
+h1, h2 {
+  line-height: 60px !important;
+}
+
+p {
+  color: #000 !important;
+  font-size: 18px !important;
+}
+
+span {
+    font-size: 17px !important;
+    color: #000 ;
+}
+
 /* Navbar CSS */
 .custom-navbar{
   z-index: 9999;
@@ -39,10 +53,6 @@ nav{
   color: #e7305a !important;
 }
 
-.nav-link-custom.active{
-  color: #e7305a !important;
-  background: rgba(231,48,90,0.10);
-}
 
 /* Button style used in your HTML */
 .rounded_12{
@@ -62,12 +72,6 @@ nav{
   height: 26px;
   display: block;
 }
-
-/* Optional: stop content hiding behind fixed navbar */
-body{
-  padding-top: 72px !important; /* adjust if your navbar height differs */
-}
-
 
 
 .navbar-logo {
@@ -111,40 +115,19 @@ body{
   background: url("/img/banner_img.png"); /* main red like screenshot */
   position: relative;
   overflow: hidden;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
 }
 
-/* Background polygons */
-.payday-hero::before,
-.payday-hero::after{
-  content:"";
-  position:absolute;
-  inset:auto;
-  z-index:0;
-  opacity: 0.25;
-}
-
-.payday-hero::before{
-  width: 520px;
-  height: 520px;
-  right: 18%;
-  top: -120px;
-  background: #ff8aa0;
-  clip-path: polygon(20% 0%, 100% 10%, 85% 100%, 0% 85%);
-}
-
-.payday-hero::after{
-  width: 700px;
-  height: 380px;
-  right: -140px;
-  bottom: -140px;
-  background: #ff6e86;
-  clip-path: polygon(15% 0%, 100% 20%, 85% 100%, 0% 80%);
+section.payday-hero.py-5 {
+    padding-top: 125px !important;
 }
 
 .payday-hero .container,
 .payday-hero .row{
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .payday-title{
@@ -178,7 +161,6 @@ body{
   height: 24px;
   align-items:center;
   justify-content:center;
-  background: rgba(255,255,255,0.12);
   border-radius: 6px;
 }
 
@@ -261,7 +243,7 @@ body{
 .bl-subtitle {
   font-weight: 600;
   color: #0b2a4a;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-underline-offset: 4px;
 }
 
@@ -467,81 +449,104 @@ body{
   line-height: 1.35;
 }
 
-/* Apply for a Payday Loan Online with BharatLoan */
 .steps-title{
   color:#0b2a4a;
   font-size: clamp(26px, 3vw, 42px);
   line-height: 1.15;
 }
 
-/* Whole row is ONE box */
 .steps-panel{
-  border: 1px solid #d6dde8;     /* light border like screenshot */
-  border-radius: 8px;
-  background: #fff;
-  overflow: hidden;              /* keeps rounded corners clean */
+  overflow: hidden; /* ✅ no scroll */
 }
 
-/* Each column */
+/* ✅ force 5 cards in one row */
+.steps-row{
+  display:flex !important;
+  gap:15px;
+  flex-wrap: nowrap;           /* ✅ one line */
+  margin: 0 !important;        /* ✅ remove bootstrap row negative margin */
+}
+
+/* ✅ each card takes 1/5 width */
 .step-col{
   position: relative;
+  flex: 1 1 0;                 /* ✅ equal width */
+  min-width: 0;                /* ✅ prevents overflow */
+  border-radius: 8px;
   background: #fff;
+  box-sizing: border-box;
 }
 
-/* vertical divider between columns */
-.step-col:not(:last-child){
-  border-right: 1px solid #d6dde8;
-}
-
-/* Padding inside each box */
+/* ✅ fixed height like your design, width is responsive */
 .step-box{
-  padding: 18px 16px;
-  height: 100%;
+  padding: 18px;
+  height: 293px;
+  box-sizing: border-box;
 }
 
-/* Typography like screenshot */
+/* Typography */
 .step-label{
   color:#0b2a4a;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 18px;
   text-decoration: underline;
   text-underline-offset: 3px;
+  text-decoration-color: #D12C4D;
   margin-bottom: 10px;
 }
 
 .step-head{
   color:#0b2a4a;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
 .step-desc{
-  color:#5c6b7a;
-  font-size: 13px;
+  color:#000000;
+  font-size: 18px;
   line-height: 1.55;
 }
 
-/* Active cards (Step 2 & 4) — gradient border 2px */
-.step-col.is-active{
-  z-index: 2;                    /* bring above divider lines */
-}
-
-.step-col.is-active::before{
+/* ✅ 2px gradient border */
+.step-col::before{
   content:"";
   position:absolute;
-  inset: 0;
-  padding: 2px;                  /* ✅ 2px like your border settings */
-  border-radius: 8px;
-  background: linear-gradient(90deg, #032E63 10%, #D12C4D);
+  inset:0;
+  padding:2px;
+  border-radius:8px;
 
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
 
   pointer-events:none;
+}
+
+/* Step 1,3,5 (odd) */
+.step-col:nth-child(odd)::before{
+  background: linear-gradient(177deg,
+    #b0b0b014 0%,
+    #b0b0b075 30%,
+    #032e6329 20%,
+    #d12c4d30 50%,
+    #d12c4d2e 50%,
+    #D12C4D 100%
+  );
+}
+
+/* Step 2,4 (even) */
+.step-col:nth-child(even)::before{
+  background: linear-gradient(1deg,
+    #b0b0b014 0%,
+    #b0b0b075 30%,
+    #032e6329 20%,
+    #d12c4d30 50%,
+    #d12c4d2e 50%,
+    #D12C4D 100%
+  );
 }
 
 /* Responsive: stacks nicely on mobile */
@@ -557,6 +562,7 @@ body{
     border-bottom: 0;
   }
 }
+/* Apply for a Payday Loan Online with BharatLoan */
 
 
 /* Fast Loan Processing */
@@ -575,6 +581,8 @@ body{
 .fast-loan-img{
   border-radius: 24px;
   object-fit: cover;
+  width: 544px;
+  height: 450px;
 }
 
 /* list text */
@@ -607,61 +615,110 @@ body{
   font-size: 12px;
 }
 
-/* ✅ table wrapper matches screenshot */
+/* Table wrapper */
 .cost-table-wrap{
-  max-width: 520px;              /* table not too wide */
   border-radius: 10px;
   overflow: hidden;
-  border: 1px solid #d7e1ee;     /* clean thin border */
+  border: 1px solid #d7e1ee;
   background:#fff;
 }
 
-/* header */
-.cost-table thead th{
-  background:#032E63;
-  color:#fff;
-  font-weight:700;
-  font-size:12px;
-  padding:10px 14px;
-  border:0;
+/* remove bootstrap borders cleanly */
+.cost-table{
+  margin:0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.cost-table > :not(caption) > * > *{
+  border: 0 !important;
+  box-shadow: none !important;
 }
 
-/* body cells */
+/* Header */
+/* ✅ TABLE HEADER (exact like screenshot) */
+.cost-table-wrap{
+  border-radius: 10px;
+  overflow: hidden;                 /* keeps header corners rounded */
+  border: 1px solid #d7e1ee;
+  background:#fff;
+}
+
+.cost-table{
+  border-collapse: separate;
+  border-spacing: 0;
+  width:100%;
+}
+
+.cost-table tbody tr:nth-child(even) td {
+    background-color: #e7f6fe;
+}
+
+/* header cells */
+.cost-table thead th{
+  background:#032E63;               /* ✅ heading bg */
+  color:#fff;
+  text-align:center;
+  vertical-align: middle;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;                /* ✅ SemiBold */
+  font-size: 18px;                 /* ✅ 22px */
+  line-height: 1.2;
+
+  padding: 14px 18px;              /* ✅ similar height */
+  border: 0 !important;
+}
+
+/* vertical white dividers */
+.cost-table thead th:not(:last-child){
+  border-right: 2px solid rgba(255,255,255,0.35) !important;
+}
+
+/* rounded header corners */
+.cost-table thead th:first-child{
+  border-top-left-radius: 10px;
+}
+.cost-table thead th:last-child{
+  border-top-right-radius: 10px;
+}
+
+/* Body */
 .cost-table tbody td{
-  font-size: 12px;
+  font-size: 16px;
   color:#0b2a4a;
   padding: 10px 14px;
-  border-top: 1px solid #e9f0f8;  /* thin row separators */
+  border-top: 1px solid #e9f0f8 !important;
   vertical-align: middle;
 }
 
-/* ✅ vertical separators like screenshot */
+/* vertical separators */
 .cost-table thead th:not(:last-child),
 .cost-table tbody td:not(:last-child){
-  border-right: 1px solid #e1ebf6;
+  border-right: 1px solid #e1ebf6 !important;
 }
 
-/* ✅ light blue tinted rows only */
-.cost-table tbody tr.tint{
+/* ✅ even rows bg */
+.cost-table tbody tr:nth-child(even){
   background:#E7F6FE;
 }
 
-/* Image matches screenshot */
+/* Image card */
 .cost-imgwrap{
   border-radius: 16px;
   overflow: hidden;
   background: #f2f2f2;
   box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+  min-height: 320px;
 }
-
 .cost-img{
   object-fit: cover;
-  height: 100%;
+      height: 420px;
+    width: 500px;
 }
 
 /* mobile */
 @media (max-width: 991.98px){
-  .cost-table-wrap{ max-width: 100%; }
+  .cost-imgwrap{ min-height: 240px; }
 }
 
 /* Compare BharatLoan with Other Credit Options */
@@ -692,4 +749,142 @@ body{
 .compare-check{
   flex: 0 0 auto;
   margin-top: 2px;
+}
+
+
+/* ===== FAQ (match screenshot) ===== */
+.faq-wrap{ max-width: 900px; }
+
+/* Title */
+.faq-title{
+  color:#0b2a4a;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1.15;
+}
+
+/* Each row looks like a card (even collapsed) */
+.faq-accordion .faq-item{
+  border: 1px solid #eef2f7;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;              /* makes header+body feel like one card */
+  margin-bottom: 14px;
+}
+
+/* Button (question row) */
+.faq-accordion .faq-btn{
+  background: transparent;
+  border: 0;
+  box-shadow: none !important;
+  color:#0b2a4a;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 20px;  /* right padding for arrow */
+}
+
+/* remove Bootstrap focus ring */
+.faq-accordion .faq-btn:focus{
+  box-shadow: none !important;
+}
+
+/* remove Bootstrap default caret svg */
+.faq-accordion .accordion-button::after{
+  content: "";
+  background-image: url("/img/Vector.png"); /* CLOSED icon */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 12px;
+  height: 12px;
+
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%) !important;
+
+  margin-left: 0 !important;
+}
+
+/* OPEN icon */
+.faq-accordion .accordion-button:not(.collapsed)::after{
+  background-image: url("/img/Vector%20(1).png"); /* OPEN icon */
+  transform: translateY(-50%) !important;
+}
+
+/* ----- ACTIVE / OPEN card styling (exact like screenshot) ----- */
+.faq-accordion .accordion-button:not(.collapsed),
+.faq-item:has(.accordion-collapse.show) .faq-btn{
+  background: rgba(233, 190, 200, 0.20);              /* #E9BEC8 @ 20% */
+  color:#0b2a4a;
+}
+
+/* give the whole open card the glow + remove border */
+.faq-accordion .faq-item:has(.accordion-collapse.show){
+  border-color: transparent;
+  background: rgba(233, 190, 200, 0.20);
+  box-shadow:  1px 4px 9px 3px rgb(254 169 189 / 46%); /* #FEA9BD @ 72% */
+}
+
+/* Body text area inside the same pink card */
+.faq-body{
+  background: transparent;       /* card already has bg */
+  padding: 0 20px 18px 20px;
+  color: rgba(0,0,0,0.70);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* remove Bootstrap's extra bg/borders */
+.faq-accordion .accordion-button{
+  border-radius: 0 !important;
+}
+.faq-accordion .accordion-body{
+  border-top: 0 !important;
+}
+
+
+/* View More button */
+.faq-more-btn{
+  background:#0b2a4a;
+  color:#fff;
+  border-radius: 10px;
+  padding: 8px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+}
+.faq-more-btn:hover{ color:#fff; filter: brightness(1.05); }
+
+
+
+/* Footer */
+.footer{
+      background-color: #032e63;
+    margin-bottom: 40px;
+}
+
+.footer a:hover {
+    color: #EE3265 !important;
+    font-weight: 500;
+}
+
+.copy-box {
+    border-top: 2px solid #fff;
+}
+
+.bg-content1 {
+    background-color: #e7305a !important;
+}
+
+.textBlack1 {
+    color: #fff !important;
+    text-decoration: none;
+}
+.marq {
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    padding: 8px 0px !important;
+    left: 0;
 }

@@ -18,12 +18,18 @@
 
 </head>
 <body>
-    <!-- Header start -->
-    <header>
+     <!-- =========================================================
+       HEADER (FIXED NAVBAR)
+       - Left: Mobile menu icon (toggler)
+       - Center: Brand logo
+       - Right: Apply Now (mobile only)
+       - Desktop: Links + Apply button
+  ========================================================== -->
+<header>
 <nav class="navbar navbar-expand-lg custom-navbar w-100 position-fixed top-0 py-2 bg-white">
   <div class="container-fluid px-0 d-flex justify-content-between align-items-center">
 
-    <!-- Left: Toggler (Mobile) -->
+    <!-- Mobile Menu Button (Hamburger) -->
     <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
       data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
       aria-label="Toggle navigation">
@@ -43,7 +49,7 @@
       <a href="https://www.bharatloan.com/apply-now" class="btn btn-primary rounded_12 shadow">Apply Now</a>
     </div>
 
-    <!-- Navbar links (collapsible) -->
+     <!-- Collapsible Nav Links (Desktop + Mobile Dropdown) -->
     <div class="collapse navbar-collapse justify-content-end order-lg-2" id="mainNavbar">
       <ul class="navbar-nav align-items-lg-center gap-lg-2">
 
@@ -91,9 +97,15 @@
 
 </header>
 
+<!-- =========================================================
+       MAIN CONTENT WRAPPER
+       (All page sections are inside this wrapper)
+  ========================================================== -->
     
 <div class="wrapper">
-    <!-- Hero Section Started -->
+      <!-- =========================
+         HERO SECTION
+    ========================== -->
      <section class="payday-hero py-5">
   <div class="container">
     <div class="row align-items-center g-4">
@@ -115,7 +127,7 @@
 
         <a href="#" class="btn btn-primary">
           Apply Now
-          <span class="ms-2 payday-btn-icon">☝</span>
+          <span class=" payday-btn-icon"><img src="img/icon-park_click-tap.png"/></span>
         </a>
       </div>
 
@@ -126,11 +138,13 @@
 
     </div>
   </div>
-</section>
+     </section>
 
 
-    <!-- Why Choose Section -->
-<section class="py-5 bg-white">
+    <!-- =========================
+         WHY CHOOSE SECTION
+    ========================== -->
+    <section class="py-5 bg-white">
   <div class="container">
     <div class="row align-items-center g-5">
 
@@ -151,7 +165,7 @@
           Why Choose BharatLoan<br />Payday Loans
         </h2>
 
-        <p class="text-muted mb-3">
+        <p class="mb-3">
           BharatLoan focuses on three core principles: speed, transparency, and responsible lending.
           The objective is not just to provide funds, but to ensure the loan remains manageable and
           clearly structured.
@@ -194,11 +208,13 @@
 
     </div>
   </div>
-</section>
+    </section>
 
-<!-- Eligibility Criteria for BharatLoan Customers -->
+ <!-- =========================
+         ELIGIBILITY SECTION
+    ========================== -->
 
-<section class="py-5 bl-elig-section">
+    <section class="py-5 bl-elig-section">
   <div class="container">
     <div class="row align-items-stretch g-4 bl-eligibility">
 
@@ -210,20 +226,20 @@
             BharatLoan Customers
           </h2>
 
-          <p class="text-muted mb-3">
+          <p class="mb-3">
             A payday loan from BharatLoan is a short-term salary advance designed to cover essential,
             time-sensitive expenses. Rather than being a long-term loan, it acts as a bridge until the
             next salary credit.
           </p>
 
-          <p class="text-muted mb-4">
+          <p class="mb-4">
             Customers may apply for amounts starting from ₹5,000 and extending up to ₹1,20,000,
             depending on eligibility, income level, and internal assessment parameters. Repayment
             tenures generally range from 2 months to 12 months, keeping the obligation limited and
             easier to plan for.
           </p>
 
-          <p class="text-muted mb-3">
+          <p class="mb-3">
             Because the loan structure is straightforward, borrowers know:
           </p>
 
@@ -278,18 +294,20 @@
 
     </div>
   </div>
-</section>
+    </section>
 
 
-<!-- Who Can Apply -->
- <section class="py-5 who-can-apply">
+<!-- =========================================================
+         WHO CAN APPLY SECTION (Cards)
+    ========================================================== -->
+    <section class="py-5 who-can-apply">
   <div class="container">
     <div class="mb-4">
       <h2 class="fw-bold section-title mb-2">Who Can Apply</h2>
-      <p class="text-muted mb-2">
+      <p class="mb-2">
         Eligibility is defined to ensure that repayment remains feasible and responsible.
       </p>
-      <p class="text-muted mb-0">Applicants should meet the following criteria:</p>
+      <p class=" mb-0">Applicants should meet the following criteria:</p>
     </div>
 
     <div class="row g-3">
@@ -349,21 +367,23 @@
       </div>
     </div>
 
-    <p class="small text-muted mt-4 mb-0">
+    <p class="small mt-4 mb-0">
       BharatLoan reviews income stability, employment details, and repayment capacity before issuing approval.
       Only salaried customers are supported under this product category.
     </p>
   </div>
-</section>
+    </section>
 
 
-<!-- Common Uses for Payday Loans -->
-<section class="py-5 payday-uses" style="background:#FEE0E7B8;">
+<!-- =========================================================
+         COMMON USES SECTION (Cards)
+    ========================================================== -->
+    <section class="py-5 payday-uses" style="background:#FEE0E7B8;">
   <div class="container">
 
     <div class="text-center mb-4">
       <h2 class="fw-bold uses-title mb-2">Common Uses for Payday Loans</h2>
-      <p class="text-muted mb-0 uses-subtitle">
+      <p class=" mb-0 uses-subtitle">
         Instant payday loans are not intended for discretionary spending or speculation. They are best suited for urgent,
         essential scenarios, such as:
       </p>
@@ -422,7 +442,7 @@
           <div class="uses-icon">
             <img src="img/travel.svg" alt="Travel" class="uses-icon-img">
           </div>
-          <p class="mb-0 uses-text">Travel associated with family or health<br>requirements</p>
+          <p class="mb-0 uses-text">Travel associated with family or health requirements</p>
         </div>
       </div>
 
@@ -439,26 +459,26 @@
 
     </div>
 
-    <p class="small text-muted text-center mt-4 mb-0">
+    <p class="small text-center mt-4 mb-0">
       Used correctly, a payday loan protects savings, avoids liquidation of investments, and prevents reliance on unregulated lenders.
     </p>
 
   </div>
-</section>
+    </section>
 
-<!-- Apply for a Payday Loan Online with BharatLoan -->
- <section class="py-5">
+<!-- =========================================================
+         APPLY STEPS SECTION
+    ========================================================== -->
+    <section class="py-5">
   <div class="container">
-
     <h2 class="fw-bold steps-title mb-4">
       Apply for a Payday Loan Online with<br class="d-none d-md-block">BharatLoan
     </h2>
 
-    <!-- ONE container with dividers -->
     <div class="steps-panel">
-      <div class="row g-0 flex-lg-nowrap">
+      <div class="row g-0 steps-row">
 
-        <div class="col-lg step-col">
+        <div class="step-col">
           <div class="step-box">
             <div class="step-label">Step 1.</div>
             <div class="step-head">Check Basic Eligibility</div>
@@ -468,7 +488,7 @@
           </div>
         </div>
 
-        <div class="col-lg step-col is-active">
+        <div class="step-col">
           <div class="step-box">
             <div class="step-label">Step 2.</div>
             <div class="step-head">Upload Documents Digitally</div>
@@ -478,7 +498,7 @@
           </div>
         </div>
 
-        <div class="col-lg step-col">
+        <div class="step-col">
           <div class="step-box">
             <div class="step-label">Step 3.</div>
             <div class="step-head">Quick Screening and Verification</div>
@@ -488,7 +508,7 @@
           </div>
         </div>
 
-        <div class="col-lg step-col is-active">
+        <div class="step-col">
           <div class="step-box">
             <div class="step-label">Step 4.</div>
             <div class="step-head">Review Your Offer</div>
@@ -498,7 +518,7 @@
           </div>
         </div>
 
-        <div class="col-lg step-col">
+        <div class="step-col">
           <div class="step-box">
             <div class="step-label">Step 5.</div>
             <div class="step-head">Receive Funds Instantly</div>
@@ -510,25 +530,25 @@
 
       </div>
     </div>
-
   </div>
-</section>
+    </section>
 
-
-<!-- Fast Loan Processing -->
-<section class="py-5 fast-loan" style="background:#E7F6FE;">
+<!-- =========================================================
+         FAST LOAN PROCESSING SECTION
+    ========================================================== -->
+    <section class="py-5 fast-loan" style="background:#E7F6FE;">
   <div class="container">
     <div class="row align-items-center g-4">
 
       <!-- Left Image -->
-      <div class="col-lg-5">
+      <div class="col-lg-6">
         <div class="fast-loan-imgwrap">
-          <img src="img/img2.png" class="img-fluid w-100 fast-loan-img" alt="Fast Loan Processing">
+          <img src="img/img2.png" class="fast-loan-img" alt="Fast Loan Processing">
         </div>
       </div>
 
       <!-- Right Content -->
-      <div class="col-lg-7">
+      <div class="col-lg-5">
         <h2 class="fast-loan-title fw-bold mb-3">Fast Loan Processing</h2>
 
         <p class="mb-3 text-dark">
@@ -633,30 +653,32 @@
 
     </div>
   </div>
-</section>
+    </section>
 
-<!-- Example of Cost Calculation for BharatLoan Customers -->
-<section class="py-5 cost-example">
+<!-- =========================================================
+         COST EXAMPLE SECTION (Table + Image)
+    ========================================================== -->
+    <section class="py-5 cost-example">
   <div class="container">
-    <div class="row align-items-start g-4">
 
-      <!-- Left -->
+    <!-- TOP: heading + paragraphs (full width) -->
+    <h2 class="fw-bold cost-title mb-2">
+      Example of Cost Calculation for BharatLoan<br class="d-none d-md-block">
+      Customers
+    </h2>
+
+    <p class="cost-small  mb-2">
+      The illustration below demonstrates how interest might work. This is only an example; actual
+      terms depend on the applicant’s profile.
+    </p>
+
+    <p class="cost-small mb-4">
+      A customer borrows ₹10,000 for 3 months at a representative interest rate of 2.5% per month:
+    </p>
+
+    <!-- BOTTOM: table left + image right -->
+    <div class="row align-items-stretch g-4">
       <div class="col-lg-7">
-        <h2 class="fw-bold cost-title mb-2">
-          Example of Cost Calculation for BharatLoan<br class="d-none d-md-block">
-          Customers
-        </h2>
-
-        <p class="cost-small text-muted mb-2">
-          The illustration below demonstrates how interest might work. This is only an example; actual
-          terms depend on the applicant’s profile.
-        </p>
-
-        <p class="cost-small text-muted mb-3">
-          A customer borrows ₹10,000 for 3 months at a representative interest rate of 2.5% per month:
-        </p>
-
-        <!-- table wrapper -->
         <div class="cost-table-wrap">
           <div class="table-responsive">
             <table class="table mb-0 cost-table">
@@ -673,7 +695,7 @@
                   <td class="text-center fw-semibold">10,000</td>
                   <td>Amount borrowed</td>
                 </tr>
-                <tr class="tint">
+                <tr>
                   <td>Monthly interest rate (example)</td>
                   <td class="text-center fw-semibold">2.5%</td>
                   <td>Representative rate used for illustration</td>
@@ -683,7 +705,7 @@
                   <td class="text-center fw-semibold">3 months</td>
                   <td>Short-term repayment period</td>
                 </tr>
-                <tr class="tint">
+                <tr>
                   <td>Interest per month</td>
                   <td class="text-center fw-semibold">250</td>
                   <td>2.5% of Rs 10,000</td>
@@ -693,7 +715,7 @@
                   <td class="text-center fw-semibold">750</td>
                   <td>Rs 250 × 3 months</td>
                 </tr>
-                <tr class="tint">
+                <tr>
                   <td>Total amount payable</td>
                   <td class="text-center fw-semibold">10,750</td>
                   <td>Principal + total interest (10,000 + 750)</td>
@@ -702,44 +724,48 @@
             </table>
           </div>
         </div>
-
-        <p class="cost-foot text-muted mt-3 mb-0">
-          Borrowers are encouraged to evaluate their repayment capability carefully before proceeding.
-        </p>
       </div>
 
-      <!-- Right -->
       <div class="col-lg-5">
-        <div class="cost-imgwrap">
-          <img src="images/cost-example.jpg" class="img-fluid w-100 h-100 cost-img" alt="Cost calculation">
+        <div class="cost-imgwrap h-100">
+          <img src="img/img4.png" class="cost-img" alt="Cost calculation">
         </div>
       </div>
-
     </div>
+
+    <!-- FOOT (full width) -->
+    <p class="cost-foot mt-3 mb-0">
+      Borrowers are encouraged to evaluate their repayment capability carefully before proceeding.
+    </p>
+
   </div>
 </section>
 
-<!-- Compare BharatLoan with Other Credit Options -->
- <section class="py-5 compare-sec" style="background:#E7F6FE;">
+
+
+ <!-- =========================================================
+         COMPARE SECTION
+    ========================================================== -->
+    <section class="py-5 compare-sec" style="background:#E7F6FE;">
   <div class="container">
     <div class="row align-items-center g-4">
 
       <!-- Left Image -->
-      <div class="col-lg-5">
+      <div class="col-lg-6">
         <div class="compare-imgwrap">
           <img src="img/img5.png" class="img-fluid w-100 compare-img" alt="Compare BharatLoan">
         </div>
       </div>
 
       <!-- Right Content -->
-      <div class="col-lg-7">
+      <div class="col-lg-6">
         <h2 class="compare-title fw-bold mb-3">
           Compare BharatLoan<br>
           with Other Credit<br>
           Options
         </h2>
 
-        <p class="text-muted mb-3">
+        <p class=" mb-3">
           Compared to traditional personal loans or informal borrowing, payday loans offer practical
           benefits for short-term needs:
         </p>
@@ -780,7 +806,7 @@
           </li>
         </ul>
 
-        <p class="text-muted mb-2">
+        <p class="mb-2">
           However, responsible borrowing is essential. Customers should:
         </p>
 
@@ -820,7 +846,7 @@
           </li>
         </ul>
 
-        <p class="text-muted mb-0">
+        <p class=" mb-0">
           Timely repayment ensures positive credit behavior and reduces long-term financial stress.
         </p>
 
@@ -828,16 +854,299 @@
 
     </div>
   </div>
+    </section>
+
+ <!-- =========================================================
+         FAQ SECTION
+         - Bootstrap accordion for FAQ items
+         - "View More" shows extra items using simple JS toggle
+    ========================================================== -->
+    <section class="py-5 faq-sec">
+  <div class="container">
+    <div class="faq-wrap mx-auto">
+      <h2 class="fw-bold faq-title text-center mb-4">Frequent Asked Questions (FAQs)</h2>
+
+      <div class="accordion faq-accordion" id="faqAccordion">
+
+        <!-- 1 (open by default) -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header" id="h1">
+            <button class="accordion-button faq-btn" type="button"
+              data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+              What is a payday loan from Bharat Loan?
+            </button>
+          </h2>
+          <div id="c1" class="accordion-collapse collapse show" aria-labelledby="h1" data-bs-parent="#faqAccordion">
+            <div class="accordion-body faq-body">
+              A payday loan is a short-term loan designed to help salaried individuals manage urgent expenses until their next salary arrival.
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header" id="h2">
+            <button class="accordion-button collapsed faq-btn" type="button"
+              data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+              How fast can I receive the money?
+            </button>
+          </h2>
+          <div id="c2" class="accordion-collapse collapse" aria-labelledby="h2" data-bs-parent="#faqAccordion">
+            <div class="accordion-body faq-body">
+              Once approved, funds are usually credited quickly, ensuring minimal waiting time in emergencies.
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header" id="h3">
+            <button class="accordion-button collapsed faq-btn" type="button"
+              data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+              Do I need a high credit score?
+            </button>
+          </h2>
+          <div id="c3" class="accordion-collapse collapse" aria-labelledby="h3" data-bs-parent="#faqAccordion">
+            <div class="accordion-body faq-body">
+              No. Payday loans primarily consider income capacity, employment, and repayment ability.
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="accordion-item faq-item">
+          <h2 class="accordion-header" id="h4">
+            <button class="accordion-button collapsed faq-btn" type="button"
+              data-bs-toggle="collapse" data-bs-target="#c4" aria-expanded="false" aria-controls="c4">
+              Can first-time borrowers apply?
+            </button>
+          </h2>
+          <div id="c4" class="accordion-collapse collapse" aria-labelledby="h4" data-bs-parent="#faqAccordion">
+            <div class="accordion-body faq-body">
+              Yes. Payday loans are suitable for individuals building or starting their credit journey.
+            </div>
+          </div>
+        </div>
+
+        <!-- ✅ Hidden FAQs (View More shows these) -->
+        <!-- NOTE: no bootstrap collapse here (prevents click issues) -->
+        <div id="moreFaqs" class="more-faqs d-none">
+
+          <div class="accordion-item faq-item">
+            <h2 class="accordion-header" id="h5">
+              <button class="accordion-button collapsed faq-btn" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c5" aria-expanded="false" aria-controls="c5">
+                Is this loan suitable for long-term borrowing?
+              </button>
+            </h2>
+            <div id="c5" class="accordion-collapse collapse" aria-labelledby="h5" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-body">
+                No. Payday loans are specifically designed for short-term needs and should not be used as ongoing credit.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h2 class="accordion-header" id="h6">
+              <button class="accordion-button collapsed faq-btn" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c6" aria-expanded="false" aria-controls="c6">
+                How will I know my repayment dates?
+              </button>
+            </h2>
+            <div id="c6" class="accordion-collapse collapse" aria-labelledby="h6" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-body">
+                All repayment schedules are shared before loan acceptance and reminders are sent via SMS and email.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h2 class="accordion-header" id="h7">
+              <button class="accordion-button collapsed faq-btn" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c7" aria-expanded="false" aria-controls="c7">
+                Can I repay early?
+              </button>
+            </h2>
+            <div id="c7" class="accordion-collapse collapse" aria-labelledby="h7" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-body">
+                Depending on policy, early repayment may be possible. Exact terms will be stated in your agreement.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h2 class="accordion-header" id="h8">
+              <button class="accordion-button collapsed faq-btn" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c8" aria-expanded="false" aria-controls="c8">
+                Are there hidden charges?
+              </button>
+            </h2>
+            <div id="c8" class="accordion-collapse collapse" aria-labelledby="h8" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-body">
+                All charges are disclosed transparently prior to approval.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item faq-item">
+            <h2 class="accordion-header" id="h9">
+              <button class="accordion-button collapsed faq-btn" type="button"
+                data-bs-toggle="collapse" data-bs-target="#c9" aria-expanded="false" aria-controls="c9">
+                What happens if I miss a payment?
+              </button>
+            </h2>
+            <div id="c9" class="accordion-collapse collapse" aria-labelledby="h9" data-bs-parent="#faqAccordion">
+              <div class="accordion-body faq-body">
+                Late payments may attract penalties and could impact credit history, so planning repayment is critical.
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /moreFaqs -->
+
+      </div><!-- /accordion -->
+
+      <div class="text-center mt-4">
+        <!-- NOTE: removed data-bs-toggle/collapse attrs -->
+        <button class="btn btn-primary" type="button" id="toggleFaqBtn">
+          View More
+        </button>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 
+
+
+    
+
 </div>
 
+<!-- =========================================================
+       FOOTER
+  ========================================================== -->
 
-<!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ <!-- =========================================================
+       FOOTER
+  ========================================================== -->
+  <footer class="footer">
+    <div class="container-fluid pt-lg-5">
+      <div class="row py-3 justify-content-center">
 
-    <!-- AOS JS -->
-     <script src="/js/aos.js"></script>
+        <div class="col-lg-3 my-2">
+          <figure>
+            <a class="navbar-brand" href="#">
+              <img src="https://www.bharatloan.com/public/images/logo-footer.png" class="logo" alt="Brand Logo" width="170">
+            </a>
+          </figure>
+          <p class="me-lg-5 textBlack1">
+            BharatLoan operates under DEVMUNI LEASING &amp; FINANCE LIMITED,
+            <br>
+            <b>RBI-Registered NBFC.</b>
+          </p>
+        </div>
+
+        <div class="col-lg-6 row p-0 col-md-12">
+
+          <div class="col-lg-4 my-2 col-md-4">
+            <div class="my-2"><a href="#" class="textBlack1">Home</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">About Us</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Contact Us</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Digital Lending Partner</a></div>
+          </div>
+
+          <div class="col-lg-4 my-2 col-md-4">
+            <div class="my-2"><a href="#" class="textBlack1">Apply Now</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Repay Loan</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">How it Works</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Service Area</a></div>
+          </div>
+
+          <div class="col-lg-4 my-2 col-md-4">
+            <div class="my-2"><a href="#" class="textBlack1">Privacy Policy</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Terms and Conditions</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">FAQs</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Rate and Terms</a></div>
+            <div class="my-2"><a href="#" class="textBlack1">Blogs</a></div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 my-2 text-center">
+          <div>
+            <a href="https://www.facebook.com/BLBharatloan" target="_blank" class="me-2 my-2">
+              <img src="https://www.bharatloan.com/public/images/f-icon2.svg" alt="facebook" class="my-2">
+            </a>
+
+            <a href="https://twitter.com/bharatloans" target="_blank" class="my-2 me-2">
+              <img src="https://www.bharatloan.com/public/images/f-icon4.svg" alt="twitter" class="my-2">
+            </a>
+
+            <a href="https://www.linkedin.com/company/bharatloan" target="_blank" class="me-2 my-2">
+              <img src="https://www.bharatloan.com/public/images/f-icon5.svg" alt="linkedin" class="my-2">
+            </a>
+
+            <a href="https://www.instagram.com/bharatloan_india" target="_blank" class="me-2 my-2">
+              <img src="https://www.bharatloan.com/public/images/f-icon3.svg" alt="instagram" class="my-2">
+            </a>
+
+            <a href="https://www.youtube.com/@bharatloans" target="_blank" class="ms-2 my-2">
+              <img src="https://www.bharatloan.com/public/images/F-icon1.svg" alt="youtube">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copy-box mt-4 align-items-center w-100 d-flex justify-content-between">
+        <p class="mb-0 py-2 fs-12 textBlack1 w-100 text-center">
+          © 2025 DEVMUNI LEASING &amp; FINANCE LIMITED
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       BOTTOM NOTICE MARQUEE (FRAUD WARNING)
+  ========================================================== -->
+  <div class="main bg-content1">
+    <marquee class="marq bg-content1 text-white" direction="left" loop="">
+      <div class="marq1">
+        "Beware of fraud! Always use our secure Repayment Website Link for loan payments. Do not make direct bank payments. BharatLoan is not responsible for
+        payments made to other accounts."
+      </div>
+    </marquee>
+  </div>
+
+  <!-- =========================
+       BOOTSTRAP 5 JS (CDN)
+       Required for navbar + accordion
+  ========================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+  <!-- =========================
+       AOS ANIMATION JS
+  ========================== -->
+  <script src="/js/aos.js"></script>
+
+  <!-- =========================================================
+       FAQ "VIEW MORE / VIEW LESS" TOGGLE SCRIPT
+       - Shows/Hides extra FAQs block (#moreFaqs)
+       - Does NOT use Bootstrap collapse (prevents click issues)
+  ========================================================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const btn = document.getElementById("toggleFaqBtn");
+      const more = document.getElementById("moreFaqs");
+
+      btn.addEventListener("click", function () {
+        const isHidden = more.classList.contains("d-none");
+        more.classList.toggle("d-none");
+        btn.textContent = isHidden ? "View Less" : "View More";
+      });
+    });
+  </script>
   </body>
 </html>
